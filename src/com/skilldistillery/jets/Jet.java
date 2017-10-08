@@ -1,16 +1,16 @@
 package com.skilldistillery.jets;
 
-public class Jets {
+public class Jet {
 	private String model; 
 	private int speedInMPH;
 	private double range; 
 	private double price;
 	private Pilot initialPilot = new Pilot();
 	
-	public Jets() {
+	public Jet() {
 		initialPilot.setRandomPilotAndOrganization(); 
 	}
-	public Jets(String model, int speedInMPH, double range, int price) {
+	public Jet(String model, int speedInMPH, double range, int price) {
 		this.model = model; 
 		this.speedInMPH = speedInMPH;
 		this.range = range; 
@@ -23,8 +23,8 @@ public class Jets {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public int getSpeedInMach() {
-		return speedInMPH;
+	public double getSpeedInMach() {
+		return (speedInMPH * 0.00130332);
 	}
 	public void setSpeedInMPH(int speedInMPH) {
 		this.speedInMPH = speedInMPH;
